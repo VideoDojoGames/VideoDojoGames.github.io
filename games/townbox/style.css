@@ -482,6 +482,7 @@ section .content {
 
 #hero {
   background-image: url("/games/townbox/data/hero-background.jpg");
+  background-position: center;
   background-size: cover;
 }
 #hero div {
