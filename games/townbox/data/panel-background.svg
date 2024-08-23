@@ -1,0 +1,8 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M200 0C46 0 -3.09944e-06 46 -3.09944e-06 200H200V0Z" fill="#FFF9EF"/>
+<path d="M200 400C46 400 -3.09944e-06 354 -3.09944e-06 200H200V400Z" fill="#FFF9EF"/>
+<path d="M200 0C354 0 400 46 400 200H200V0Z" fill="#FFF9EF"/>
+<path d="M200 400C354 400 400 354 400 200H200V400Z" fill="#FFF9EF"/>
+<rect y="199" width="400" height="2" fill="#FFF9EF"/>
+<path d="M201 4.36022e-08L201 400H199L199 0L201 4.36022e-08Z" fill="#FFF9EF"/>
+</svg>

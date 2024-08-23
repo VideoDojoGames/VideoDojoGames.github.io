@@ -5,71 +5,241 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <title>VideoDojo Games</title>
-    <style>
-        html {
-            --swatch-red: #FF6666;
-            font-family: 'Outfit', system-ui;
-
-            background-color: var(--swatch-red);
-            color: white;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: grid;
-            place-items: center;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        main {
-            display: flex;
-            flex-direction: column;
-            padding-inline: 1rem;
-            align-items: center;
-            gap: 1rem;
-            & h1 {
-                font-size: 2.5rem;
-                font-weight: 400;
-                text-align: center;
-            }
-        }
-
-        a.button:any-link {
-            transition-property: color, background-color;
-            transition-duration: 100ms;
-            text-decoration: none;
-            background-color: var(--swatch-red);
-            color: inherit;
-            display: flex;
-            font-size: 2rem;
-            border: 3px solid white;
-            padding: 1rem 3rem;
-            border-radius: 500rem;
-            &:hover {
-                color: var(--swatch-red);
-                background-color: white;
-            }
-        }
-
-        img {
-            width: 100%;
-            max-width: 35rem;
-            margin-block-end: 3rem;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/data/js/photoswipe.css">
+    <title>Home — VideoDojo Games</title>
 </head>
 <body>
+    <header>
+    <nav>
+        <details class="dropdown">
+            <summary>
+                <span class="icon"></span>
+            </summary>
+            <menu>
+                <a href="/#townbox" class="button"><li>Games</li></a>
+                <a href="/#about-us" class="button"><li>About us</li></a>
+                <a href="/#contact" class="button"><li>Get in touch</li></a>
+            </menu>
+        </details>
+        <a href="/">
+            <img src="/data/img/brand/videodojo-games-logo.svg" alt="VideoDojo Games">
+        </a>
+        <span></span>
+        <menu>
+            <a href="/#townbox"><li>Games</li></a>
+            <a href="/#about-us"><li>About us</li></a>
+            <a href="/#contact"><li>Get in touch</li></a>
+        </menu>
+    </nav>
+</header>
     <main>
-        <img src="/videodojo-games-logo.svg" alt="VideoDojo Games">
-        <h1>Hi! We’re a small UK-based game studio, with a passion for play!</h1>
-        <a href="mailto:hello@videodojo.games" class="button">Get in touch!</a>
-    </main>
+<section id="townbox">
+    <img src="/data/img/townbox_logo.png" alt="Townbox" class="townbox-logo">
+    <div class="vertical-group">
+        <a href="https://store.steampowered.com/app/2906440/Townbox/" class="button">Wishlist on Steam</a>
+        <a href="/games/townbox/" class="button">Learn more</a>
+    </div>
+</section>
+
+<section id="about-us" class="theme-cream">
+    <div class="hero-layout">
+        <div class="hero-summary">
+            <h1>Meet the team</h1>
+            <p>VideoDojo Games is a small (but mighty!) independent, UK-based games studio founded in 2023. Creativity and play is at the heart of everything we do!</p>
+        </div>
+        <div class="hero-illustration">
+            <img src="/data/img/brand/meet-the-team.png" alt="">
+        </div>
+    </div>
+    <div class="team-grid">
+        
+            <article class="team-card">
+                <img src="/data/img/brand/portraits/dom.png" alt="">
+                <div>
+                    <h3>Dom <span class="mini-text">(he/him)</span></h3>
+                    <p>Creative Director</p>
+                    <div class="team-links">
+                        
+                            <a href="https://www.youtube.com/@VideoDojoPro" class="icon" title="YouTube channel">▶️</a>
+                        
+                            <a href="https://www.twitter.com/VideoDojoPro" class="icon" title="Twitter">🐦</a>
+                        
+                    </div>
+                </div>
+            </article>
+        
+            <article class="team-card">
+                <img src="/data/img/brand/portraits/jordan.png" alt="">
+                <div>
+                    <h3>Jordan <span class="mini-text">(he/him)</span></h3>
+                    <p>3D Artist</p>
+                    <div class="team-links">
+                        
+                            <a href="https://www.artstation.com/jordzz" class="icon" title="ArtStation">🅰️</a>
+                        
+                            <a href="https://www.twitter.com/jordanf3d" class="icon" title="Twitter">🐦</a>
+                        
+                    </div>
+                </div>
+            </article>
+        
+            <article class="team-card">
+                <img src="/data/img/brand/portraits/kristina.png" alt="">
+                <div>
+                    <h3>Kristina <span class="mini-text">(she/her)</span></h3>
+                    <p>3D Character Artist</p>
+                    <div class="team-links">
+                        
+                            <a href="https://kristinakoeva.artstation.com/" class="icon" title="ArtStation">🅰️</a>
+                        
+                            <a href="https://www.linkedin.com/in/kristinakoeva/" class="icon" title="LinkedIn">💼</a>
+                        
+                    </div>
+                </div>
+            </article>
+        
+            <article class="team-card">
+                <img src="/data/img/brand/portraits/sam.png" alt="">
+                <div>
+                    <h3>Sam <span class="mini-text">(he/him)</span></h3>
+                    <p>Gameplay Programmer</p>
+                    <div class="team-links">
+                        
+                            <a href="https://dicemaster5.github.io/website/" class="icon" title="Website">🌐</a>
+                        
+                            <a href="https://github.com/dicemaster5" class="icon" title="GitHub">🐈</a>
+                        
+                            <a href="https://x.com/DicedBasilisk" class="icon" title="Twitter">🐦</a>
+                        
+                    </div>
+                </div>
+            </article>
+        
+            <article class="team-card">
+                <img src="/data/img/brand/portraits/thom.png" alt="">
+                <div>
+                    <h3>Thom <span class="mini-text">(he/him)</span></h3>
+                    <p>Composer</p>
+                    <div class="team-links">
+                        
+                            <a href="https://thomrobsonmusic.com/" class="icon" title="Website">🌐</a>
+                        
+                            <a href="https://www.twitter.com/thomrobsonmusic" class="icon" title="Twitter">🐦</a>
+                        
+                            <a href="https://www.instagram.com/thomrobsonmusic/" class="icon" title="Instagram">📷</a>
+                        
+                            <a href="https://www.threads.net/@thomrobsonmusic" class="icon" title="Threads">🧶</a>
+                        
+                    </div>
+                </div>
+            </article>
+        
+            <article class="team-card">
+                <img src="/data/img/brand/portraits/valentin.png" alt="">
+                <div>
+                    <h3>Valentin <span class="mini-text">(he/him)</span></h3>
+                    <p>UI/UX Designer</p>
+                    <div class="team-links">
+                        
+                            <a href="https://voxy.space" class="icon" title="Website">🌐</a>
+                        
+                            <a href="https://www.youtube.com/@voxybuns" class="icon" title="YouTube channel">▶️</a>
+                        
+                            <a href="https://x.com/Voxybuns" class="icon" title="Twitter">🐦</a>
+                        
+                    </div>
+                </div>
+            </article>
+        
+            <article class="team-card">
+                <img src="/data/img/brand/portraits/vitoria.png" alt="">
+                <div>
+                    <h3>Vitoria <span class="mini-text">(she/her)</span></h3>
+                    <p>Character Designer</p>
+                    <div class="team-links">
+                        
+                            <a href="https://vitoriabas.com" class="icon" title="Website">🌐</a>
+                        
+                            <a href="https://www.instagram.com/basvii/" class="icon" title="Instagram">📷</a>
+                        
+                    </div>
+                </div>
+            </article>
+        
+    </div>
+</section>
+
+<section id="contact" class="constrained-area">
+    <div class="hero-layout">
+        <div class="hero-summary">
+            <h1>Get in touch</h1>
+            <p>
+                Want to know what we're up to? Keep up with the latest VideoDojo Games news on our socials! 
+                    <a href="https://twitter.com/VideoDojoGames" class="icon" title="Twitter">🐦</a>
+                    <a href="https://www.youtube.com/@TownboxGame" class="icon" title="YouTube">▶️</a>
+            </p>
+            <p>
+                Or <a href="mailto:hello@videodojo.games">shoot us an email</a> if you'd like to talk about partnerships or other business stuff with us!
+            </p>
+        </div>
+        <div class="hero-illustration">
+            <img src="/data/img/brand/get-in-touch.png" alt="">
+        </div>
+    </div>
+</section>
+</main>
+    <footer>
+    <nav>
+        <div class="footer-logo">
+            <img src="/data/img/brand/footer-logo.svg" alt="VideoDojo Games" id="footer-logo">
+            <img src="/data/img/brand/footer-pupil.svg" alt="" class="footer-logo-eye">
+            <img src="/data/img/brand/footer-pupil.svg" alt="" class="footer-logo-eye">
+        </div>
+        <menu>
+            <li><a href="/#townbox">Games</a></li>
+            <li><a href="/#about-us">About us</a></li>
+            <li><a href="/#contact">Get in touch</a></li>
+            <li class="socials">
+                <a href="https://www.twitter.com/VideoDojoGames" class="icon" title="Twitter">🐦</a>
+                <a href="https://www.youtube.com/@TownboxGame" class="icon" title="YouTube">▶️</a>
+            </li>
+
+        </menu>
+        <menu>
+            <li><p>© 2023–2024 VideoDojo Games.<br>All rights reserved.</p></li>
+            <li><p class="small-text">
+                Registered in England and Wales No. 15103274<br>
+                Union House, 111 New Union Street, Coventry, West Midlands, CV1 2NT, United Kingdom
+            </p></li>
+        </menu>
+        <img src="/data/img/brand/videodojo-games-logo.svg" alt="VideoDojo Games" class="footer-logo-static">
+    </nav>
+</footer>
+
+<script>
+    document.addEventListener('mousemove', (e) => {
+        const mouseX = e.clientX
+        const mouseY = e.clientY
+
+        const eyes = document.querySelectorAll(".footer-logo-eye");
+        eyes.forEach((eye) => {
+            var rect = eye.getBoundingClientRect();
+            var anchorX = rect.left + rect.width / 2;
+            var anchorY = rect.top + rect.height / 2;
+            var angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
+            eye.style.transform = "rotate(" + (90 + angleDeg) + "deg)";
+        })
+    })
+
+    function angle(cx, cy, ex, ey) {
+        const dy = ey - cy;
+        const dx = ex - cx;
+        const rad = Math.atan2(dy, dx);
+        const deg = rad * 180 / Math.PI;
+        return deg;
+    }
+</script>
 </body>
 </html>

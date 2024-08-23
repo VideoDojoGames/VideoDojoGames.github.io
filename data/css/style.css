@@ -1,0 +1,297 @@
+/* I. CSS Reset (by Josh W. Comeau) */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+/* II. Font face declarations */
+
+@font-face {
+    font-family: 'Pally';
+    src: url('/data/font/Pally-Regular.woff2') format('woff2'),
+             url('/data/font/Pally-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pally';
+    src: url('/data/font/Pally-Medium.woff2') format('woff2'),
+             url('/data/font/Pally-Medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pally';
+    src: url('/data/font/Pally-Bold.woff2') format('woff2'),
+             url('/data/font/Pally-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+/* III. Base values */
+
+:root {
+    font-size: 16px;
+
+    --swatch-white: #FFFFFF;
+    --swatch-cream: #FFF9EF;
+    --swatch-ink: #10143E;
+    --swatch-coral: #FF6666;
+    --swatch-yellow: #F8D156;
+    --swatch-cyan: #AFDDE1;
+    --swatch-pink: #F7A5C4;
+
+    --color-text: var(--swatch-ink);
+    --color-background: var(--swatch-white);
+
+    --size-px: 1px;
+    --size-2px: 2px;
+    --size-50: 0.5rem;
+    --size-75: 0.75rem;
+    --size-100: 1rem;
+    --size-125: 1.25rem;
+    --size-150: 1.5rem;
+    --size-200: 2rem;
+    --size-250: 2.5rem;
+    --size-300: 3rem;
+    --size-400: 4rem;
+    --size-500: 5rem;
+    --size-600: 6rem;
+    --size-700: 7rem;
+    --size-800: 8rem;
+    --size-900: 9rem;
+    --size-1000: 10rem;
+
+    --font-body: 'Pally', system-ui, sans-serif;
+    --font-headings: 'Cherry Bomb One', system-ui, sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--size-125);
+    color: var(--swatch-ink);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+    font-weight: 400;
+    line-height: 1.1;
+    text-wrap: balance;
+    color: var(--swatch-coral);
+}
+
+h1 {
+    font-size: var(--size-500);
+    &:not(:last-child) {
+        margin-block-end: var(--size-100);
+    }
+}
+
+h3 {
+    font-size: var(--size-250);
+    > span {
+        font-size: var(--size-150);
+    }
+}
+
+a:any-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.leading-text {
+    font-size: var(--size-200);
+}
+
+header {
+    background: var(--swatch-coral);
+    color: white;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+        
+    & > nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1024px;
+        margin: 0 auto;
+
+        & .header_logo {
+            max-width: 5rem;
+        }
+
+        & > menu {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            font-weight: bold;
+        }
+    }
+}
+
+footer {
+    background-color: var(--swatch-coral);
+    color: var(--swatch-white);
+    padding-block: 4rem;
+    padding-inline: 1rem;
+    > .footer-contents {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(max-content, 15rem));
+        gap: 1rem;
+    }
+}
+
+section {
+    padding-block: var(--size-400);
+}
+
+.constrained-area {
+    display: grid;
+    padding-inline: var(--size-100);
+    grid-template-columns:
+        1fr
+        min(1200px, 100%)
+        1fr;
+}
+
+.constrained-area > * {
+    grid-column: 2;
+}
+
+.two-column-container {
+    display: grid;
+    gap: var(--size-200);
+    grid-template-columns: 
+        1fr
+        1fr;
+    align-items: center;
+}
+
+.full-bleed {
+    width: 100%;
+    grid-column: 1 / 4;
+}
+
+#townbox {
+    min-height: 100vh;
+    background-image: url("/data/img/townbox_hero.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    padding-block-start: 2rem;
+    padding-block-end: 6rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    & > .townbox-logo {
+        max-height: 12rem;
+    }
+}
+
+#about-us {
+    background-color: var(--swatch-cream);
+    padding-block: 4rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    &> div {
+        width: 100%;
+    }
+}
+
+.team-card {
+    display: flex;
+    gap: var(--size-200);
+    align-items: center;
+    background: var(--swatch-white);
+    padding: var(--size-200);
+    border-radius: 2rem;
+    & img {
+        max-height: 10rem;
+    }
+    & div {
+        display: flex;
+        flex-direction: column;
+    }
+    & .team-links {
+        margin-block-start: var(--size-100);
+        display: flex;
+        flex-direction: row;
+        gap: var(--size-50);
+    }
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+a.button:any-link {
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: var(--swatch-coral);
+    border-radius: 1000px;
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
+    width: 100%;
+}
+
+.footer-logo {
+    max-width: 20rem;
+    position: relative;
+}
+
+.footer-logo-eye {
+    position: absolute;
+    left: 118px;
+    top: 112px;
+}
+
+.footer-logo-eye:last-of-type {
+    position: absolute;
+    left: 226px;
+    top: 112px;
+}
+
