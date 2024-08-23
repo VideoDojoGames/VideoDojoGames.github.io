@@ -104,6 +104,9 @@ a:any-link {
   font-size: var(--size-150);
   font-weight: 400;
   color: inherit;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
 }
 
 header, footer {

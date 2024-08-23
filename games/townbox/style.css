@@ -104,6 +104,9 @@ a:any-link {
   font-size: var(--size-150);
   font-weight: 400;
   color: inherit;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
 }
 
 header, footer {
@@ -681,6 +684,7 @@ p + p {
   .hero-summary > p {
     padding: var(--size-400);
     border-image: url("/games/townbox/data/panel-background.svg");
+    border-image-slice: 199 fill;
     border-image-width: 160px;
     border-width: 40px;
   }
