@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>VideoDojo Games</title>
+    <style>
+        html {
+            --swatch-red: #FF6666;
+            font-family: 'Outfit', system-ui;
+
+            background-color: var(--swatch-red);
+            color: white;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            padding-inline: 1rem;
+            align-items: center;
+            gap: 1rem;
+            & h1 {
+                font-size: 2.5rem;
+                font-weight: 400;
+            }
+        }
+
+        a.button:any-link {
+            transition-property: color, background-color;
+            transition-duration: 100ms;
+            text-decoration: none;
+            background-color: var(--swatch-red);
+            color: inherit;
+            display: flex;
+            font-size: 2rem;
+            border: 3px solid white;
+            padding: 1rem 3rem;
+            border-radius: 500rem;
+            &:hover {
+                color: var(--swatch-red);
+                background-color: white;
+            }
+        }
+
+        img {
+            max-width: 35rem;
+            margin-block-end: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img src="/videodojo-games-logo.svg" alt="VideoDojo Games">
+        <h1>Hi! We’re a small UK-based game studio, with a passion for play!</h1>
+        <a href="mailto:hello@videodojo.games" class="button">Get in touch!</a>
+    </main>
+</body>
+</html>
