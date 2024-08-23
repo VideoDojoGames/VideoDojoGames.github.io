@@ -207,7 +207,7 @@ section {
 #townbox {
     min-height: 100vh;
     background-image: url("/data/img/townbox_hero.jpg");
-    background-position: bottom;
+    background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
 
